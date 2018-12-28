@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Titles from './components/Titles';
 import Form from './components/Form';
@@ -77,6 +78,10 @@ class App extends React.Component {
               <div className="row">
                 <div className="col-xs-5 title-container">
                   <Titles />
+                </div>
+                <div className="col-xs-7 form-container">
+                  <Form getWeather={this.getWeather}/>
+                  <Weather {...this.state} />
                 </div>
               </div>
             </div>
